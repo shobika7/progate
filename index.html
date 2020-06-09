@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>COVID - 19</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="home.html">COVID-19</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="home.html">Home</a></li>
+        <li><a href="#count">Count</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="content container">
+  <img class="mySlides" src="image/mm5.jpg" style="height: 10%;width: 130%;margin-left:-182px;">
+  <img class="mySlides" src="image/covid.png" style="width:100%;">
+  <img class="mySlides" src="image/covid3.png" style="width:100%;">
+  <img class="mySlides" src="image/covid-3.png" style="width:100%;">
+  <button class="colour icon-left btn" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="colour icon-right btn" onclick="plusDivs(1)">&#10095;</button>
+</div> 
+<section class="outer-box" >
+  <div id="count">
+  <h2 style="text-align: center; font-weight: bold; padding: 5px 0px 15px 0px;">India count</h2>
+    <div class="inner-box">
+        <figure class="icon-box"><img src="image/icon-1.png" alt=""></figure>
+        <div>
+               <h2 class="text" id="demo4"></h2>
+        </div>
+        <h3><b>Confirmed Cases</b></h3>
+    </div>
+    <div class="inner-box">
+        <figure class="icon-box"><img src="image/icon-3.png" alt=""></figure>
+        <div>
+              <h2 class="text" id="demo1"></h2>   
+        </div>
+        <h3><b>Active Cases</b></h3>
+    </div>
+    <div class="inner-box">
+        <figure class="icon-box"><img src="image/icon-2.png" alt=""></figure>
+        <div>
+            <h2 class="text" id="demo2"></h2>
+        </div>
+        <h3><b>Recovered Cases</b></h3>
+    </div>
+    <div class="inner-box">
+        <figure class="icon-box"><img src="image/icon-1.png" alt=""></figure>
+        <div>
+            <h2 class="text" id="demo3"></h2>
+        </div>
+        <h3><b>Total Deaths</b></h3>
+    </div>
+  </div>
+</section>
+<section class="outer-box">
+  <h2 style="text-align: center; font-weight: bold; padding: 5px 0px 15px 0px;">Tamil Nadu count</h2>
+    <div class="inner-box">
+        <figure class="icon-box"><img src="image/icon-1.png" alt=""></figure>
+        <div>
+               <h2 class="text" id="demo5"></h2>
+        </div>
+        <h3><b>Confirmed Cases</b></h3>
+    </div>
+    <div class="inner-box">
+        <figure class="icon-box"><img src="image/icon-3.png" alt=""></figure>
+        <div>
+              <h2 class="text" id="demo6"></h2>   
+        </div>
+        <h3><b>Active Cases</b></h3>
+    </div>
+    <div class="inner-box">
+        <figure class="icon-box"><img src="image/icon-2.png" alt=""></figure>
+        <div>
+            <h2 class="text" id="demo7"></h2>
+        </div>
+        <h3><b>Recovered Cases</b></h3>
+    </div>
+    <div class="inner-box">
+        <figure class="icon-box"><img src="image/icon-1.png" alt=""></figure>
+        <div>
+            <h2 class="text" id="demo8"></h2>
+        </div>
+        <h3><b>Total Deaths</b></h3>
+    </div>
+</section>
+<footer class="container-fluid text-center">
+  <p style="float: left;">covid-19</p>
+  <ul>
+    <li style="float: right; display: block; padding-right: 20px;">India</li>
+    <li style="float: right; display: block; padding-right: 20px;">Tamil Nadu</li>
+  </ul>
+</footer>
+<script type="text/javascript" src="script.js"></script>
+<script>
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.apify.com/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true",
+  "method": "GET"
+}
+$.ajax(settings).done(function(maddis) {
+  // alldis=response["Tamil Nadu"];
+  // maddis=alldis["districtData"].Madurai;
+  active=maddis.activeCases;
+  confirmed=maddis.totalCases;
+  recovered=maddis.recovered;
+  deceased=maddis.deaths;
+  document.getElementById("demo1").innerHTML = active;
+  document.getElementById("demo2").innerHTML = recovered;
+  document.getElementById("demo3").innerHTML = deceased;
+  document.getElementById("demo4").innerHTML = confirmed;
+  tncase=maddis["regionData"];
+  tn=tncase[29];
+  document.getElementById("demo5").innerHTML = tn.totalCases;
+  document.getElementById("demo6").innerHTML = tn.totalInfected;
+  document.getElementById("demo7").innerHTML = tn.recovered;
+  document.getElementById("demo8").innerHTML = tn.deceased;
+
+});
+  document.getElementById("demo1").innerHTML = "connectinternet!";
+  document.getElementById("demo2").innerHTML = "connectinternet!";
+  document.getElementById("demo3").innerHTML = "connectinternet!";
+  document.getElementById("demo4").innerHTML = "connectinternet!";
+  document.getElementById("demo5").innerHTML = "connectinternet!";
+  document.getElementById("demo6").innerHTML = "connectinternet!";
+  document.getElementById("demo7").innerHTML = "connectinternet!";
+  document.getElementById("demo8").innerHTML = "connectinternet!";
+
+</script>
+</body>
+</html>

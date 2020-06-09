@@ -1,0 +1,163 @@
+.navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+}    
+footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+}
+.outer-box{
+	padding: 10px 20px;
+	height: 300px;
+	margin : 150px;
+	background-color: white;
+	border-radius: 15px;
+	border-color: #b349ba;
+	box-shadow: 5px 5px 5px 5px #c9c2af;
+}
+.inner-box{
+	float: left;
+	text-align: center;
+	padding: 0px 50px;
+	padding-top: 0px;
+	border-right: 1px;
+}
+.icon-box{
+	position: absolute;
+	padding-right: 50px;
+	padding-left: 50px;
+}
+.inner-box b {
+	text-align: center;
+	font-size: 18px;
+}
+.inner-box h2 {
+	text-align: center;
+	font-size: 14px;
+	padding-top: 10px;
+	margin-top: 100px;
+	padding : 15px 60px;
+	
+}
+.colour{ 
+	color:#fff!important;
+	background-color:#000!important
+}
+.icon-left
+{
+	position:absolute;
+	top:50%;
+	left:0%;
+	transform:translate(0%,-50%);
+	-ms-transform:translate(-0%,-50%)
+}
+.icon-right{ 
+	position:absolute; 
+	top:50%;
+	right:0%;
+	transform:translate(0%,-50%);
+	-ms-transform:translate(0%,-50%)
+}
+.btn:first-child{
+	background-color:#ccc;
+	color:#000
+}
+.btn:hover{
+	color:#000!important;
+	background-color:#ccc!important;
+}
+.container:hover{
+	display:block;
+}
+
+.content {
+	margin-left:auto;
+	margin-right:auto;
+}
+.content { 
+	padding-top: 40px;
+	text-align: center;
+	width:80%;
+	height: 20%;
+}
+.mySlides {
+	display:none;
+}    /* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+	  height: 60px;
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+	.card-horizontal {
+		display: flex;
+		flex: 1 1 auto;
+	}
+	body {
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f7f7f7;
+}
+
+.lib-panel {
+    margin-bottom: 20Px;
+}
+.lib-panel img {
+    width: 100%;
+    background-color: transparent;
+}
+
+.lib-panel .row,
+.lib-panel .col-md-6 {
+    padding: 0;
+    background-color: #FFFFFF;
+}
+
+
+.lib-panel .lib-row {
+    padding: 0 20px 0 20px;
+}
+
+.lib-panel .lib-row.lib-header {
+    background-color: #FFFFFF;
+    font-size: 20px;
+    padding: 10px 20px 0 20px;
+}
+
+.lib-panel .lib-row.lib-header .lib-header-seperator {
+    height: 2px;
+    width: 26px;
+    background-color: #d9d9d9;
+    margin: 7px 0 7px 0;
+}
+
+.lib-panel .lib-row.lib-desc {
+    position: relative;
+    height: 100%;
+    display: block;
+    font-size: 13px;
+}
+.lib-panel .lib-row.lib-desc a{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 20px;
+}
+
+.row-margin-bottom {
+    margin-bottom: 20px;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.10);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.10);
+}
+
+.no-padding {
+    padding: 0;
+}
